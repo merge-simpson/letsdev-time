@@ -1,4 +1,4 @@
-package me.letsdev;
+package me.letsdev.time;
 
 import java.util.function.LongSupplier;
 
