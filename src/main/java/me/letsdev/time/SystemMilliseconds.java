@@ -1,4 +1,4 @@
-package me.letsdev;
+package me.letsdev.time;
 
 public class SystemMilliseconds implements MillisecondSupplier {
     @Override
