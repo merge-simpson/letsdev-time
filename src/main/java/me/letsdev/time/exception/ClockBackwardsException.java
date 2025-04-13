@@ -4,16 +4,16 @@ import java.time.Instant;
 
 import static java.time.temporal.ChronoField.MILLI_OF_SECOND;
 
-public class ClockBackwardException extends RuntimeException {
+public class ClockBackwardsException extends RuntimeException {
 
     private final Instant currentTimestamp;
     private final Instant lastTimestamp;
 
-    public ClockBackwardException(long timestamp, long lastTimestamp) {
+    public ClockBackwardsException(long timestamp, long lastTimestamp) {
         this(Instant.ofEpochMilli(timestamp), Instant.ofEpochMilli(lastTimestamp));
     }
 
-    public ClockBackwardException(Instant currentTimestamp, Instant lastTimestamp) {
+    public ClockBackwardsException(Instant currentTimestamp, Instant lastTimestamp) {
         super(
                 """
                 Clock moved backwards. Refusing to generate id for %d milliseconds.
